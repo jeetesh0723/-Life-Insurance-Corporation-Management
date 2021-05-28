@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<style>
+    /*set border to the form*/
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+    /*assign full width inputs*/
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /*set a style for the buttons*/
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 35px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: auto;
+    }
+    /* set a hover effect for the button*/
+
+    button:hover {
+        opacity: 0.8;
+    }
+    /*set extra style for the cancel button*/
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #4CAF50;
+    }
+    /*centre the display image inside the container*/
+
+    .imgcontainer {
+        text-align: center;
+        margin: 5px 0 5px 0;
+    }
+    /*set image properties*/
+
+    img.avatar {
+        width: 30%;
+        border-radius: 30%;
+    }
+    /*set padding to the container*/
+
+    .container {
+        padding: 10px;
+    }
+    /*set the forgot password text*/
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /*set styles for span and cancel button on small screens*/
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        span.psw1 {
+            display: block;
+            float: none;
+        }
+
+        .cancelbtn {
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <h1> Life Insurance Corporation </h1>
+    <!--Step 1 : Adding HTML-->
+    <form action="customer_login.jsp" method="post">
+        <div class="imgcontainer">
+            <img src="lic1.jpeg"
+                 alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>Customer Id (Customer Name)</b></label>
+            <input type="text" placeholder="Enter Username" id="uname" value="" name="uname" required>
+
+            <label><b>Customer Password</b></label>
+            <input type="password" placeholder="Enter Password" id="psw" value="" name="psw" required>
+
+            <button type="submit" name="submit" onclick="customer_login.jsp">Login</button>
+            <!-- <input type="checkbox" checked="checked"> Remember me -->
+           <span> <a href="registerpage.html">Register Customer?</a></span>
+            </span>
+            <span class="psw">Customer forgot <a href="forgetpass.html">password?</a></span>
+        </div>
+         
+        <div class="container" style="background-color:#f1f1f1">
+          <label>For official use only </br></label>
+            <button onClick="parent.location='adminlogin.html'" type="button" class="cancelbtn">Admin Login</button>
+        </div>
+       
+    </form>
+
+</body>
+
+</html>
